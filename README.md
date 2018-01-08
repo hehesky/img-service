@@ -1,7 +1,7 @@
 # img-service
 A flask web app for storing images.
 
-The project was done during September-November 2017, together with Karen Yahan Yang (https://github.com/karenyahanyang)
+The project was done during September-November 2017, together with Karen Yahan Yang (https://github.com/karenyahanyang). I migrated the code from a private repo, with sensitive information removed.
 
 Read the docs to find out more.
 
