@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Upload page{% endblock %}
+{% block header %}Choose a photo to upload.{% endblock %}
+{% block body %}
+<form name="upload_form" method="POST" enctype="multipart/form-data" onsubmit="return(validate())">
+    <label for="imgfile">Accepted format jpg,jpeg,png,gif</label>
+    <input type="file" name="imgfile" id='imgfile' accept=".jpg,.jpeg,.png,.gif" id="imgfile" required="true">
+    <input class="submit_button" type="submit" value="Submit">
+    <a href="/dashboard"><button type="button">Return to Dashboard</button></a>
+    <a href="/logout"><button type="button">Log out</button></a>
+    <p id="error_msg" style="color:red"></p>
+</form>
+
+<script>
+function validate()
+{
+    var imgfile = document.getElementById("imgfile").value;
+    var error_msg=document.getElementById("error_msg");
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+    if(!allowedExtensions.exec(imgfile))
+    {
+        error_msg.innerHTML="Unacceptable file format";
+        return false;
+    }
+    else
+        return true;
+}
+
+</script>
+{% endblock %}

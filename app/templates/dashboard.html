@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block title %}Gallery{% endblock %}
+{% block header %} Welcome, {{ username }}{% endblock %}
+{% block body %}
+<div class="buttons">
+	<a href="/upload"><button type="button">Upload</button></a>
+    <a href="/logout"><button type="button">Log out</button></a>
+</div>
+<span>{{message}}</span>
+<div class="container">
+	
+      <div class="row text-center text-lg-left" id="gallery">
+      	<script> 
+      	createGallery('{{username}}',{{ pic|safe }}); 
+      	</script>
+      </div>
+      
+      <!--  Modal content for the mixer image example -->
+  <div class="modal fade pop-up-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></br>
+        </div>
+        <div class="modal-body" id="modal-body">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal mixer image -->
+ 
+		
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Register{% endblock %}
+{% block header %}Create your Image Service account. It's free and only takes a minute.{% endblock %}
+{% block body %}
+<div class="form">
+	 <form name="register_form" method="POST" onsubmit="return check_form()">
+        Username
+        <input type="text" name="username" id="username"><br />
+        Password
+        <input type="password" name="password" id="password"> <br />
+
+        Confirm Password 
+        <input type="password" name="password_confirm" id="password_confirm"> <br />
+        <p id="password_warning"></p>
+        <input class='submit_button' type="submit" name="submit" value="submit">
+        <p class="message">Already registered? <a href='/login'">Sign In</a></p>
+    </form>
+</div>
+{% endblock %}

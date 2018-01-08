@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block header %}Please log in or create an account.{% endblock %}
+{% block body %}
+<div class="buttons">
+	<button id="login_button" onclick="location.href='/login'" type="button">Log in here</button> 
+	<button id="register_button" onclick="location.href='/register'" type="button">Register</button> 
+</div>
+{% endblock %}

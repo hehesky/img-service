@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Log in{% endblock %}
+{% block header %}Please log in.{% endblock %}
+{% block body %}
+<div class="form">
+	<form method="POST">
+    	Username <input type="text" name="username" required="true"><br />
+    	Password <input type="password" name="password" required="true"> <br />
+    	<input class='submit_button' type="submit" name="submit">
+    	<p class="message">Haven't registered? <a href='/register'>Register</a></p>
+	</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<html>
+
+<div class="form">
+	<form name="test_form" method="POST" enctype="multipart/form-data" onsubmit="return(validate())">
+    	Username <input type="text" name="userID" required="true"><br />
+    	Password <input type="password" name="password" required="true"> <br />
+	<label for="imgfile">Accepted format jpg,jpeg,png,gif</label>
+    	<input type="file" name="uploadedfile" id='imgfile' accept=".jpg,.jpeg,.png,.gif" id="imgfile" required="true"><br />
+    	<input class='submit_button' type="submit" name="submit">
+	</form>
+</div>
+
+<script>
+function validate()
+{
+    var imgfile = document.getElementById("imgfile").value;
+    var error_msg=document.getElementById("error_msg");
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+    if(!allowedExtensions.exec(imgfile))
+    {
+        error_msg.innerHTML="Unacceptable file format";
+        return false;
+    }
+    else
+        return true;
+}
+
+</script>
+</html>

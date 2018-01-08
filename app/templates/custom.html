@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Message{% endblock %}
+{% block header %}{{message}}{% endblock %}
+{% block body %}
+<div class="buttons" id="custom-buttons">
+	<script>
+		show_buttons('{{type}}');
+	</script>
+</div>
+{% endblock %}
